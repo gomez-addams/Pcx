@@ -93,5 +93,6 @@ Shader "Point Cloud/Point"
             ENDCG
         }
     }
+    Fallback "Mobile/VertexLit"
     CustomEditor "Pcx.PointMaterialInspector"
 }

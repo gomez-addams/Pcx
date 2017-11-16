@@ -38,5 +38,6 @@ Shader "Point Cloud/Disk"
             ENDCG
         }
     }
+    Fallback "Point Cloud/Point"
     CustomEditor "Pcx.DiskMaterialInspector"
 }

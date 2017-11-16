@@ -1,6 +1,12 @@
 // Pcx - Point cloud importer & renderer for Unity
 // https://github.com/keijiro/Pcx
 
+#if SHADER_API_METAL
+// iOS 11 (on my iPad at least) fails to compile these shaders with a half-precision property.
+#define half float
+#define half3 float3
+#endif
+
 #define PCX_MAX_BRIGHTNESS 16
 
 uint PcxEncodeColor(half3 rgb)
